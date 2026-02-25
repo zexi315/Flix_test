@@ -1,0 +1,39 @@
+// 源代码及固件编译，日期20251226
+// 源代码使用Arduino IDE 2.3.x以上版本编译，不支持老版本的1.8.19！
+// 必须安装ESP32开发板核心库（即esp32 by Espressif Systems）
+// 必须安装MAVLINK，FlixPeriph库文件！
+// 开发板可选择ESP32 Dev Module或WeMOS D1 MINI ESP32；
+// 嘉立创开源项目：ESP32迷你无人机 https://oshwhub.com/malagis/esp32-mini-plane
+// B站微辣火龙果 https://space.bilibili.com/544479100
+
+固件烧录后，打开Arduino IDE的串口监视器，
+按一下开发板左边的EN小按钮，你将在串口消息框，看到类似信息，
+看到消息后，必须做的2件事：
+输入mfr等4个命令，测试马达。
+输入ca命令，按提示校准陀螺仪加速度；
+如果有大遥控，还需要输入cr命令，按串口提示，校准RC遥控！
+
+"输入命令，然后回车:\n"
+"help - 帮助show help\n"
+"p - 显示所有参数\n"
+"p <name> - 显示指定参数\n"
+"p <name> <value> - 设置参数\n"
+"preset - 重置参数reset\n"
+"mfr, mfl, mrr, mrl - 测试马达 (为了安全不要装桨叶！！！)\n"
+"cr - 校准RC遥控calibrate RC\n"
+"ca - 校准陀螺仪加速度calibrate accel\n"
+"ps - 显示pitch/roll/yaw姿态\n"
+"rc - 显示RC遥控数据\n"
+"psq - 显示姿态四元数\n"
+"imu - 显示IMU数据\n"
+"time - 显示时间信息\n"
+"wifi - 显示Wi-Fi显示\n"
+"mot - 显示motor输出\n"
+"sys - 显示系统info信息\n"
+"raw/stab/acro/auto - 飞行模式设定\n"
+"arm - 解锁无人机arm\n"
+"disarm - 锁定无人机disarm\n"
+"log [dump] - 打印日志\n"
+"reset - 重置无人机状态\n"
+"reboot - 重启无人机\n";
+
